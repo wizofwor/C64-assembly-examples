@@ -1,5 +1,8 @@
 C64-Assembly-Examples
 =====================
 
+Codes distrubuted hereby might be incomplete and might not work properly
+
 irq multiplexer:    simple sprite multiplexer
+joysict check:      Simple joystick-check rutine based on c64-wiki.com example
 notes:              reminders on C64 development
