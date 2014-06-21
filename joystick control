@@ -1,0 +1,40 @@
+; Simple joystick-check rutine based on c64-wiki.com example
+; This program is a simple joystick check routine for control port 2.
+; Joystick up/down = border color +/-
+; Joystick left/right = background color +/-
+; Fire button = end
+; Start with SYS 49152
+
+*=$c000   ; start address of the program
+
+start    lda $02
+         cmp $dc00
+         beq start      ; loop until the joystick register changes.
+
+         lda $dc00      ; store new value in memory location 2.
+         sta $02		
+
+up       lda #%00000001 ; mask joystick up movement 
+         bit $dc00      ; bitwise AND with address 56320
+         bne down       ; zero flag is not set -> skip to down
+         inc $d020      ; border color + 1
+
+down     lda #%00000010 ; mask joystick down movement 
+         bit $dc00      ; bitwise AND with address 56320
+         bne left       ; zero flag is not set -> skip to left
+         dec $d020      ; border color- 1
+
+left     lda #%00000100 ; mask joystick left movement 
+         bit $dc00      ; bitwise AND with address 56320
+         bne right      ; zero flag is not set -> skip to right
+         inc $d021      ; background color + 1
+
+right    lda #%00001000 ; mask joystick right movement 
+         bit $dc00      ; bitwise AND with address 56320
+         bne buton      ; zero flag is not set -> skip to buton
+         dec $d021      ; background color - 1
+
+buton    lda #%00010000 ; mask joystick button push 
+         bit $dc00      ; bitwise AND with address 56320
+         bne start      ; button not pressed -> enter loop again 
+         rts            ; back to basic
