@@ -1,0 +1,7 @@
+#Add by Carry
+
+LDA $0400 
+CLC 
+ADC #$1B 
+STA $0400 
+BRK 
