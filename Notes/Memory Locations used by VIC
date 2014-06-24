@@ -16,7 +16,7 @@ $00  3*  $C000-$FFFF
 $01  2   $8000-$BFFF
 $02  1*  $4000-$7FFF
 $03  0   $0000-$3FFF (Default value)
-*rom character set is not awaialbe in these banks
+*rom character set is not available in these banks
 
 
 SCREEN_RAM
