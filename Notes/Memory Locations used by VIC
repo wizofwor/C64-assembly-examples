@@ -48,4 +48,5 @@ $04 xxxx010x -> $1000 - $17ff *Rom image in bank 0 and 1 (default)
 $06 xxxx011x -> $1800 - $1fff
 $08 xxxx100x -> $2000 - $27ff
 $0a xxxx101x -> $2800 - $2fff
+$0c xxxx110x -> $3000 - $37ff
 $0e xxxx111x -> $3800 - $3fff
