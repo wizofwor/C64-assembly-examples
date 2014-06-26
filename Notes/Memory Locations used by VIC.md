@@ -24,14 +24,22 @@ SCREEN_RAM
 Upper 4 bits of $d018 controls the location of the screen memory.
 Locations on Bank 0
 
-$00 0000xxxx -> $0000
-$10 0001xxxx -> $0400 (default)
-$20 0010xxxx -> $0800
-$30 0011xxxx -> $0c00
-$40 0100xxxx -> $1000
-... ........    .....
-$e0 1110xxxx -> $3800
-$f0 1111xxxx -> $3C00 
+$D018 = %0000xxxx -> screenmem is at $0000
+$D018 = %0001xxxx -> screenmem is at $0400 (default)
+$D018 = %0010xxxx -> screenmem is at $0800
+$D018 = %0011xxxx -> screenmem is at $0c00
+$D018 = %0100xxxx -> screenmem is at $1000
+$D018 = %0101xxxx -> screenmem is at $1400
+$D018 = %0110xxxx -> screenmem is at $1800
+$D018 = %0111xxxx -> screenmem is at $1c00
+$D018 = %1000xxxx -> screenmem is at $2000
+$D018 = %1001xxxx -> screenmem is at $2400
+$D018 = %1010xxxx -> screenmem is at $2800
+$D018 = %1011xxxx -> screenmem is at $2c00
+$D018 = %1100xxxx -> screenmem is at $3000
+$D018 = %1101xxxx -> screenmem is at $3400
+$D018 = %1110xxxx -> screenmem is at $3800
+$D018 = %1111xxxx -> screenmem is at $3c00
 
 
 COLOR_RAM
