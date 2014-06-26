@@ -1,8 +1,8 @@
-VIC BANK SELECTION
-==================
+### VIC BANK SELECTION
 
 Bank selection is a bit tricky:
 
+```
 lda $dd02   ;make sure Port A on CIA#2 is set to output
 ora #03     ;
 sta $dd02
@@ -18,6 +18,7 @@ $01  2   $8000-$BFFF
 $02  1*  $4000-$7FFF
 $03  0   $0000-$3FFF (Default value)
 *rom character set is not available in these banks
+```
 
 
 ### SCREEN_RAM
@@ -25,25 +26,17 @@ $03  0   $0000-$3FFF (Default value)
 Upper 4 bits of $d018 controls the location of the screen memory.
 Locations on Bank 0
 
-$D018 Value | Screen Ram 
----------|---------------
-%0000xxxx | $0000
-%0001xxxx | $0400 (default)
-%0010xxxx | $0800
-%0011xxxx | $0c00
-%0100xxxx | $1000
-%0101xxxx | $1400
-%0110xxxx | $1800
-%0111xxxx | $1c00
-%1000xxxx | $2000
-%1001xxxx | $2400
-%1010xxxx | $2800
-%1011xxxx | $2c00
-%1100xxxx | $3000
-%1101xxxx | $3400
-%1110xxxx | $3800
-%1111xxxx | $3c00
-
+$D018 Value | Screen Ram | $D018 Value | Screen Ram 
+---------|---------------|-------------|---------
+%0000xxxx | $0000 | %1000xxxx | $2000
+%0001xxxx | $0400*| %1001xxxx | $2400
+%0010xxxx | $0800 | %1010xxxx | $2800
+%0011xxxx | $0c00 | %1011xxxx | $2c00
+%0100xxxx | $1000 | %1100xxxx | $3000
+%0101xxxx | $1400 | %1101xxxx | $3400
+%0110xxxx | $1800 | %1110xxxx | $3800
+%0111xxxx | $1c00 | %1111xxxx | $3c00
+*default
 
 ### COLOR_RAM
 
