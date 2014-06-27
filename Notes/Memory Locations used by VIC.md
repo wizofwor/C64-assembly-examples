@@ -23,8 +23,9 @@ $03  0   $0000-$3FFF (Default value)
 
 ### SCREEN_RAM
 
-Upper 4 bits of $d018 controls the location of the screen memory.
-Locations on Bank 0
+C64 screen in text mode is formed by 40x25=1000 cells or characters. 'Screen ram' or 'screen memory' holds the pointers for each character cell. It is 1000 bytes long, but for the sake of simplicity, in memory it goes on multiples of 1024 = $0400. Upper 4 bits of $d018 controls the location of the screen memory.
+
+Possible locations on of screen ram in VIC Bank 0
 
 $D018 Value | Screen Ram | $D018 Value | Screen Ram 
 ---------|---------------|-------------|---------
