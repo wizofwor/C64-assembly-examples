@@ -1,0 +1,25 @@
+;--------------------------------------------------------------------
+; Self modifying copy routine
+;
+; Thx to: Linus Åkesson
+;--------------------------------------------------------------------
+
+SRC = Source Adress
+DST = Destination Adress
+
+        ldy     #xx           ; 8 iterations of the outer loop
+.oloop  ldx     #xx           ; 256 iterations of the inner loop
+        
+.iloop  lda     $SRC,x         ; Copy one byte...
+        sta     $DST,x         ; ...into the right place.
+        inx
+        bne     .iloop
+
+        dey
+        beq     done
+
+        inc     loop+2          ; increase the source adress
+        inc     loop+5          ; and the destination...
+        jmp     .oloop
+
+.done   rts
