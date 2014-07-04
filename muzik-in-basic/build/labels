@@ -1,0 +1,3 @@
+irq	= $9f3b	; ?
+music	= $c000
+music_play	= $c003
