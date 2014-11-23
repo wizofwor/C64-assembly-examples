@@ -1,9 +1,0 @@
-COUNTER	= $2
-main	= $c001
-raster	= $c003
-delayTable	= $c03e	; ?
-idle2	= $c01e
-idle1	= $c00d
-colorTable	= $c035	; ?
-loop	= $c012
-sinusTable	= $c047	; ?
