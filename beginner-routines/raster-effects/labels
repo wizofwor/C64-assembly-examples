@@ -1,8 +1,0 @@
-COUNTER	= $2
-rasterStart	= $c040	; ?
-main	= $c001
-raster	= $c003
-idle2	= $c01d
-idle1	= $c00d
-colorTable	= $c035	; ?
-loop	= $c012
