@@ -89,19 +89,30 @@ irq
 	sta $d020
 	sta $d021
 
-	;jsr calculate 	;calculate the effect	
+	jsr calc 	;calculate the effect	
 
 .end	asl $d019 	;acknowledge interrupt register
 	jmp $ea81
 
 }
 ;----------------------------------------------------------
-; CALCULATe
+; CALCULATE
 ;----------------------------------------------------------
 calc
-	ldx counter
-	dex
-	bne .end
+	lda counter 	;if counter = 100 	
+	cmp #30 	;reset counter
+	bne +
+
+	lda #00
+	sta counter
+
++	adc #100 	;x = counter+100
+ 	tax
+
+	lda #11
+	sta colors,x
+
+	inc counter
 
 .end	rts
 

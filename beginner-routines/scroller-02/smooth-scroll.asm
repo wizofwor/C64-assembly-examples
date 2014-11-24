@@ -1,4 +1,4 @@
-!to "smooth_scroll.prg",cbm
+!to "build/smooth_scroll.prg",cbm
 
 * = $0801                               ; BASIC start address (#2049)
 !byte $0d,$08,$dc,$07,$9e,$20,$34,$39   ; BASIC loader to start at $c000...
