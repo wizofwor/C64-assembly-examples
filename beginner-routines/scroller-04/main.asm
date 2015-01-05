@@ -136,4 +136,4 @@ speedMask
 !src "data.asm"
 
 * = music
-	!bin "Selector_88_part_2",,$7c+2
+	!bin "Antictxt.sid",,$7c+2
