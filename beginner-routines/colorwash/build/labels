@@ -1,0 +1,6 @@
+SCREEN_RAM	= $400
+COLOR_RAM	= $d800
+cwash	= $c027
+EFFECT_COUNTER	= $2
+renkler	= $c0cd	; ?
+metin	= $c055	; ?
