@@ -11,7 +11,7 @@ loop:	LDA STATE 		;load state
 return:	LDA STATE 		;increase state
 	CLC 			;value in memory
 	ADC #$01 		;till STATE>LIMIT
-	AND LIMIT 		;the roll over
+	AND LIMIT 		;then roll over
 	STA STATE
 jmp loop
 
