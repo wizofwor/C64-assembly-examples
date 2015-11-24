@@ -1,6 +1,5 @@
 STATE = $02 	;current animation case (like jump,hit,run etc.)
 FRAME = $03 	;current frame within the case
-LIMIT = $01
 SPRITE_POINTER = SCREEN_MEM+$03f8 
 
 spriteAnimation:
