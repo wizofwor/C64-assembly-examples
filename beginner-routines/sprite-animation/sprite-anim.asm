@@ -1,6 +1,6 @@
 STATE = $02
 FRAME = $03
-LIMIT = #$01
+LIMIT = $01
 SPRITE_POINTER = SCREEN_MEM+$03f8 
 
 
@@ -11,7 +11,7 @@ loop:	LDA STATE 		;load state
 return:	LDA STATE 		;increase state
 	CLC 			;value in memory
 	ADC #$01 		;till STATE>LIMIT
-	AND LIMIT 		;then roll over
+	AND# LIMIT 		;then roll over
 	STA STATE
 jmp loop
 
