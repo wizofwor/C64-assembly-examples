@@ -1,37 +1,32 @@
-STATE = $02
-FRAME = $03
+STATE = $02 	;current animation case (like jump,hit,run etc.)
+FRAME = $03 	;current frame within the case
 LIMIT = $01
 SPRITE_POINTER = SCREEN_MEM+$03f8 
 
-
-loop:	LDA STATE 		;load state
-	ASL 			;mulitply by 2
-	TAX 			;and jump to this adress
-	JMP (JUMP_TABLE,X) 	
-return:	LDA STATE 		;increase state
-	CLC 			;value in memory
-	ADC #$01 		;till STATE>LIMIT
-	AND# LIMIT 		;then roll over
-	STA STATE
-jmp loop
-
+spriteAnimation:
+	lda STATE 		;load state
+	asl 			;mulitply by 2
+	tax 			;and jump to this adress
+	jmp (JUMP_TABLE,X) 	
+	rts
+	
 	;animation frames for each state 
-STATE1: 
-	LDX FRAME  		;animation state 1 has three frames
-	LDA SPRITE_POINTERS_TB,X
-	STA SPRITE_POINTER
-	LDA FRAME 		;increase
-	ADC #$01 		;animation
-	AND #$03		;frame
-	STA FRAME 		;index
-	JMP return
-STATE2:
-	LDA #$03 		;animation state 2 has only one frare
-	STA SPRITE_POINTER
-	JMP return
+state1: 
+	ldx FRAME  		;animation state 1 has three frames
+	lda SPRITE_POINTERS_TB,X
+	sta SPRITE_POINTER
+	lda FRAME 		;increase
+	adc #$01 		;animation
+	and #$03		;frame
+	sta FRAME 		;index
+	jmp return
+state:
+	lda #$03 		;animation state 2 has only one frame
+	sta SPRITE_POINTER
+	jmp return
 
 * = JUMP_TABLE 
-!by >STATE1,<STATE1,>STATE2,<STATE2
+!by >state1,<state1,>state1,<state2
 
 * = SPRITE_PONITERS_TB
 !by = 0,1,2,3
