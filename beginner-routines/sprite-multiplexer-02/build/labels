@@ -1,0 +1,14 @@
+SCREEN_RAM	= $400	; unused
+COUNTER	= $2
+irq	= $602c	; ?
+sprite_init	= $c003	; unused
+rowTable	= $60be	; ?
+dx	= $60ce	; unused
+bitTable	= $60d7	; ?
+spritey	= $60c6	; ?
+spritex	= $60df	; ?
+TARGET_RASTER	= $3
+raster_loop	= $6081
+irqSetup	= $6000	; ?
+SCINIT	= $ff81
+OFFSET	= $4
