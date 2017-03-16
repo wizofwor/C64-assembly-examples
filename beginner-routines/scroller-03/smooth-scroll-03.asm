@@ -1,35 +1,43 @@
-!to "build/scroller.prg",cbm
+;##############################################################################
+;#
+;# SMOOTH SCROLLER by Wizofwor - November 2014
+;#
+;##############################################################################
 
-* = $0801                               ; BASIC start address (#2049)
-!byte $0d,$08,$dc,$07,$9e,$20,$34,$39   ; BASIC loader to start at $c000...
-!byte $31,$35,$32,$00,$00,$00           ; puts BASIC line 2012 SYS 49152
+	!to "build/scroller.prg",cbm
 
-* = $c000
+	* = $0801                               ; BASIC start address (#2049)
+	!byte $0d,$08,$dc,$07,$9e,$20,$34,$39   ; BASIC loader to start at $c000...
+	!byte $31,$35,$32,$00,$00,$00           ; puts BASIC line 2012 SYS 49152
 
+	* = $c000
 
-SCREEN_RAM = $0400
-COLOR_RAM = $D800
+; Address definitions
 
-COUNTER	= $05
+	SCREEN_RAM = $0400
+	COLOR_RAM = $D800
 
-offset1	= $06
-offset2	= $07
-offset3	= $08
-offset4	= $09
-offset5	= $0A
+	COUNTER	= $05
 
-buffer1	= $10
-buffer2	= $11
-buffer3	= $12
-buffer4	= $13
-buffer5	= $14
+	offset1	= $06
+	offset2	= $07
+	offset3	= $08
+	offset4	= $09
+	offset5	= $0A
 
-music =$1000
-music_play = music+3
+	buffer1	= $10
+	buffer2	= $11
+	buffer3	= $12
+	buffer4	= $13
+	buffer5	= $14
 
-;-------------------------------------------------------------------------
-;  Main Loop
-;-------------------------------------------------------------------------
+	music =$1000
+	music_play = music+3
+
+; Program Start
+
+	* = $c000
+
 	jsr init
 	jsr print_screen
 
@@ -40,16 +48,12 @@ music_play = music+3
 
 	jmp *
 
+; Subroutines
 
-;-------------------------------------------------------------------------
-;  Subroutines
-;-------------------------------------------------------------------------
 	!src "scroller-subroutines.asm"
 
+; IRQ - Calculation Part
 
-;-------------------------------------------------------------------------
-;  IRQ - Calculation Part
-;-------------------------------------------------------------------------
 !zone irq{		
 irq	jsr music_play
 
@@ -120,9 +124,8 @@ irq	jsr music_play
 	bne .action
 	jsr shift5
 
-;-------------------------------------------------------------------------
-; Action Part
-;-------------------------------------------------------------------------
+; IRQ - Action Part
+
 .action
 		
 .raster1
