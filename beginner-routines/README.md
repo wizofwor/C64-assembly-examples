@@ -17,7 +17,7 @@ Basic C64 assembly references for beginners.
 4. [Multicolor Bitmap](multicolor-bitmap)  
    How to show Multicolor Image
    
-###Being Prepared
+### Being Prepared
    	
 5. Raster Bars  
 6. Smooth Scroll
