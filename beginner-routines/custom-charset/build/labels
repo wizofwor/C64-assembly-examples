@@ -1,0 +1,4 @@
+SCREEN_RAM	= $400	; unused
+COLOR_RAM	= $d800	; unused
+CHARSET	= $2000
+SCINIT	= $ff81	; unused
