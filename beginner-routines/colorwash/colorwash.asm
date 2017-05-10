@@ -13,8 +13,13 @@
 
 	* = $c000 "Main Program"
 
-// Clear Screen
+// Set Screen Colors
 start:
+	lda #00
+	sta $d020
+	sta $d021
+
+// Clear Screen
 	ldx #$00
 	lda #$20
 !:	sta SCREEN_RAM,x
@@ -42,9 +47,8 @@ cwash:
 !:	cmp $d012	
 	bne !-	
 		
-	/*Renk geçişi efekti iki index yazmacını
-	;birlikte kullanıyor. Y okunacak rengi
-	;X yazılacak adresi indexliyor*/
+	/* Colorwash effect uses two index register together.
+	Y: source, X: destination */
 	
 	ldy EFFECT_COUNTER
 	ldx #00
@@ -67,7 +71,6 @@ cwash:
 	
 	lda #40
 	sta EFFECT_COUNTER
-	
 	jmp cwash
 
 // Data	----------------------------------------------------
@@ -77,12 +80,12 @@ text:
 	.text "   this is a smiple colorwash effect    "
 
 colors:
-	.by  14,14,14,14,14,14,14,14,14,14
-	.by  14,14,14,14,14,14,14,15,01,07
-	.by  01,07,15,14,14,14,14,14,14,14
-	.by  14,14,14,14,14,14,14,14,14,14
+	.byte  14,14,14,14,14,14,14,14,14,14
+	.byte  14,14,14,14,14,14,14,15,01,07
+	.byte  01,07,15,14,14,14,14,14,14,14
+	.byte  14,14,14,14,14,14,14,14,14,14
 
-	.by  14,14,14,14,14,14,14,14,14,14
-	.by  14,14,14,14,14,14,14,15,01,07
-	.by  01,07,15,14,14,14,14,14,14,14
-	.by  14,14,14,14,14,14,14,14,14,14
+	.byte  14,14,14,14,14,14,14,14,14,14
+	.byte  14,14,14,14,14,14,14,15,01,07
+	.byte  01,07,15,14,14,14,14,14,14,14
+	.byte  14,14,14,14,14,14,14,14,14,14
