@@ -13,9 +13,10 @@ You can find bunch of short routines, some primitive demo effects and such [in t
 
 1. Custom Charset
 3. Colorwash
-3. Smooth Scroll 
-4. Logo Swing (ACME)
-5. Music (ACME)
-6. Multicolor Bitmap (ACME)
-7. Raster bars (ACME)
-8. Sprite Multiplexing (ACME)
+3. Smooth Scroll
+4. Petscii Scroll 
+5. Logo Swing (ACME)
+6. Music (ACME)
+7. Multicolor Bitmap (ACME)
+8. Raster bars (ACME)
+9. Sprite Multiplexing (ACME)
