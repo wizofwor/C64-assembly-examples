@@ -1,0 +1,16 @@
+parsing
+flex pass 1
+flex pass 2
+flex pass 3
+Output pass
+
+Memory Map
+----------
+Default-segment:
+  $0801-$080d Basic
+  $080e-$080d Basic End
+  $c000-$c136 Main Program
+
+Writing prg file: /Users/gokhan/Local-Repo/C64-assembly-examples/beginner-routines/smooth-scroll/bin/smooth-scroll-01_Compiled.prg
+Writing Vice symbol file: /Users/gokhan/Local-Repo/C64-assembly-examples/beginner-routines/smooth-scroll/bin/smooth-scroll-01.vs
+Writing Symbol file: bin/smooth-scroll-01.sym

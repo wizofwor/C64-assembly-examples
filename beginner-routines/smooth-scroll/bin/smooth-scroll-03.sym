@@ -1,0 +1,43 @@
+.label print_screen=$c029 {
+  .label loop=$c02b
+}
+.label shift2=$c064 {
+  .label loop=$c069
+}
+.label shift3=$c078 {
+  .label loop=$c07d
+}
+.label shift4=$c08c {
+  .label loop=$c091
+}
+.label shift5=$c0a0 {
+  .label loop=$c0a5
+}
+.label init=$c010 {
+  .label loop=$c019
+}
+.label start=$c000
+.label irq=$c11b {
+  .label raster4=$c1ae
+  .label raster3=$c1a2
+  .label raster2=$c196
+  .label raster1=$c18a
+  .label part1=$c13a
+  .label part2=$c14a
+  .label delay2=$c12a
+  .label raster6=$c1c6
+  .label raster5=$c1ba
+  .label delay=$c11e
+  .label part3=$c15a
+  .label part4=$c16a
+  .label action=$c18a
+  .label part5=$c17a
+  .label end=$c1d2
+}
+.label set_raster=$c03d {
+}
+.label move_logo=$c0b4 {
+  .label loop=$c0cf
+}
+.label text1=$c1d8
+.label text2=$c2a0

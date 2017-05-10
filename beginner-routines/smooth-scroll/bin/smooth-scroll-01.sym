@@ -1,0 +1,11 @@
+.label prepare=$c005
+.label spaceCheck=$c08b
+.label wait=$c03e
+.label raster2=$c049
+.label raster1=$c035
+.label wait2=$c052
+.label shift=$c06c
+.label start=$c000
+.label clear=$c013
+.label text=$c097
+.label write=$c024
