@@ -1,35 +1,34 @@
-!to "build/custom-charset.prg",cbm
-!src "standart.asm"
+/*=============================================
 
-	;----------------------------------------
-	;CONSTANTS
-	;----------------------------------------
+  6502 TUTORIALS - CUSTOM CHARSET 
 
-	SCREEN_RAM = $0400
-	COLOR_RAM = $d800
-	CHARSET = $2000
+ ============================================*/
 
-	;-----------------------------------------
-	;MAIN
-	;-----------------------------------------
+	.const SCREEN_RAM = $0400
+	.const COLOR_RAM = $d800
+	.const CHARSET = $2000
 
-	+SET_START $c000
+	BasicUpstart2(start)
 
-	;Change Border Color
+	*=$c000 "Main Program"
+
+start:
+// Change Border Color
 	lda #$03
 	sta $d020
 
-	;Change Screen Colors
+// Change Screen Colors
 	ldx #$00
--	sta $d800,x
-	sta $d900,x
-	sta $da00,x
-	sta $db00,x
+!:	sta COLOR_RAM,x
+	sta COLOR_RAM+$100,x
+	sta COLOR_RAM+$200,x
+	sta COLOR_RAM+$300,x
 	inx
-	bne -
+	bne !-
 
-	;Change cursor color
+// Change cursor color
 	sta $286
+
 
 	lda #$18
 	sta $d018
@@ -37,4 +36,4 @@
 	rts
 	
 	* = CHARSET
-	!bin "antik_1.64c",1024,2
+	.import c64 "antik_1.64c"

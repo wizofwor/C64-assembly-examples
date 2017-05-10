@@ -1,51 +1,54 @@
-!to "build/colorwash.prg",cbm
-!src "standart.asm"
+/*=============================================
 
-	;----------------------------------------
-	;CONSTANTS
-	;----------------------------------------
-	
-	SCREEN_RAM = $0400
-	COLOR_RAM = $d800
-	EFFECT_COUNTER = $02
+  6502 TUTORIALS - COLOR WASH
 
-	+BASIC_START
+ ============================================*/
 
-	;-----------------------------------------
-	; MAIN
-	;-----------------------------------------
+// Definitions
+	.const SCREEN_RAM = $0400
+	.const COLOR_RAM = $d800
+	.const EFFECT_COUNTER = $02
 	
-	* = $c000
+	BasicUpstart2(start)
 
-	+CLEAR_SCREEN
+	* = $c000 "Main Program"
+
+// Clear Screen
+start:
+	ldx #$00
+	lda #$20
+!:	sta SCREEN_RAM,x
+	sta SCREEN_RAM+$100,x
+	sta SCREEN_RAM+$200,x
+	sta SCREEN_RAM+$300,x
+	dex
+	bne !-
 	
-	;Metnimizi ekrana yerleştirelim
-	
+// Place the text on screen
 	ldx #00
--	lda metin,x
+!:	lda text,x
 	sta SCREEN_RAM+40*5,x
 	inx
 	cpx #120
-	bne - 
+	bne !- 
 	
-	;Efect sayacını maksimum değere getirelim
+// 	Initialize the counter
 	lda #40
 	sta EFFECT_COUNTER
 	
-	;Ekran tazelenene kadar bekleyelim
-	;1/50 saniye	
-
-cwash	lda #00	
--	cmp $d012	
-	bne -	
+//  Wait till the screen refresh (1/50 seconds)	
+cwash:
+	lda #00	
+!:	cmp $d012	
+	bne !-	
 		
-	;Renk geçişi efekti iki index yazmacını
+	/*Renk geçişi efekti iki index yazmacını
 	;birlikte kullanıyor. Y okunacak rengi
-	;X yazılacak adresi indexliyor
+	;X yazılacak adresi indexliyor*/
 	
 	ldy EFFECT_COUNTER
 	ldx #00
--	lda renkler,y
+!:	lda colors,y
 	sta COLOR_RAM+40*5,x
 	inx
 	sta COLOR_RAM+40*6,x
@@ -54,7 +57,7 @@ cwash	lda #00
 	iny
 	dex
 	cpx #40
-	bne -
+	bne !-
 	
 	dec EFFECT_COUNTER
 	
@@ -67,22 +70,19 @@ cwash	lda #00
 	
 	jmp cwash
 
-	;-----------------------------------------
-	; DATA
-	;-----------------------------------------
-	
-metin 
-	!scr "          + ++ hi there! ++ +           "
-	!scr "   ---------------------------------    "
-	!scr "   this is a smiple colorwash effect    "
+// Data	----------------------------------------------------
+text: 
+	.text "          + ++ hi there! ++ +           "
+	.text "   ---------------------------------    "
+	.text "   this is a smiple colorwash effect    "
 
-renkler
-	!by  14,14,14,14,14,14,14,14,14,14
-	!by  14,14,14,14,14,14,14,15,01,07
-	!by  01,07,15,14,14,14,14,14,14,14
-	!by  14,14,14,14,14,14,14,14,14,14
+colors:
+	.by  14,14,14,14,14,14,14,14,14,14
+	.by  14,14,14,14,14,14,14,15,01,07
+	.by  01,07,15,14,14,14,14,14,14,14
+	.by  14,14,14,14,14,14,14,14,14,14
 
-	!by  14,14,14,14,14,14,14,14,14,14
-	!by  14,14,14,14,14,14,14,15,01,07
-	!by  01,07,15,14,14,14,14,14,14,14
-	!by  14,14,14,14,14,14,14,14,14,14
+	.by  14,14,14,14,14,14,14,14,14,14
+	.by  14,14,14,14,14,14,14,15,01,07
+	.by  01,07,15,14,14,14,14,14,14,14
+	.by  14,14,14,14,14,14,14,14,14,14
