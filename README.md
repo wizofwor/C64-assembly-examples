@@ -9,7 +9,7 @@ Simple examples of 6510 Assembly
 
 ## Tutorials
 
-You can find bunch of short routines, some primitive demo effects and such [in this folder](https://github.com/wizofwor/C64-assembly-examples/tree/master/beginner-routines).
+You can find bunch of short routines, some primitive demo effects and such [in this folder](https://github.com/wizofwor/C64-assembly-examples/tree/master/tutorials).
 
 1. Custom Charset
 3. Colorwash
