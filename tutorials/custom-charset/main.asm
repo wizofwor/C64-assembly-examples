@@ -1,4 +1,4 @@
-/* =========================================== *
+/* ==================================================== *
 
   C64 ASM TUTORIALS by wizofwor
 
@@ -9,13 +9,14 @@
   Environment: KickAssembler v.4.12
   Date: September 2018 
 
- * =========================================== */
+ * ==================================================== */
 
-	.const SCREEN_RAM = $0400
-	.const COLOR_RAM = $d800
-	.const CHARSET = $2000
+// Constant Definitions
+.const SCREEN_RAM = $0400
+.const COLOR_RAM = $d800
+.const CHARSET = $2000
 
-// --- Main Program with Basic Upstarter --------
+// --- Main Program with Basic Upstarter -----------------
 
 BasicUpstart2(start)
 
@@ -43,6 +44,7 @@ start:	lda #$03
 
 	rts
 	
-// --- Include Data -----------------------------
+// --- Include Data --------------------------------------
+
 * = CHARSET "Character Set"
 .import c64 "antik_1.64c"
