@@ -1,13 +1,15 @@
-/* ------------------------------------------- *
+/* =========================================== *
 
   C64 ASM TUTORIALS by wizofwor
 
   CUSTOM CHARSET
 
+  Replace standart character set with custom one 
+
   Environment: KickAssembler v.4.12
   Date: September 2018 
 
- * ------------------------------------------- */
+ * =========================================== */
 
 	.const SCREEN_RAM = $0400
 	.const COLOR_RAM = $d800
