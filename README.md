@@ -11,9 +11,13 @@ Simple examples of 6510 Assembly
 
 You can find bunch of short routines, some primitive demo effects and such [in this folder](https://github.com/wizofwor/C64-assembly-examples/tree/master/tutorials).
 
-1. Custom Charset
-3. Colorwash
-3. Smooth Scroll
+1. [Custom Charset](tutorials/custom-charset)   
+   How to replace standart character set with a custom one.
+2. [Colorwash](tutorials/colorwash)  
+   Add a little color to your text
+3. [Smooth Scroll](tutorials/smooth-scroll)   
+   Smooth text scroll with 4 examples.
+   
 4. Petscii Scroll 
 5. Logo Swing (ACME)
 6. Music (ACME)

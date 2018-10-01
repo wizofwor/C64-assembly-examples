@@ -11,6 +11,6 @@ Default-segment:
   $080e-$080d Basic End
   $c000-$c1a9 Main Program
 
-Writing prg file: /Users/gokhan/Local-Repo/C64-assembly-examples/beginner-routines/smooth-scroll/bin/smooth-scroll-02_Compiled.prg
-Writing Vice symbol file: /Users/gokhan/Local-Repo/C64-assembly-examples/beginner-routines/smooth-scroll/bin/smooth-scroll-02.vs
+Writing prg file: /Users/gokhan/Local-Repo/C64-assembly-examples/tutorials/smooth-scroll/bin/smooth-scroll-02_Compiled.prg
+Writing Vice symbol file: /Users/gokhan/Local-Repo/C64-assembly-examples/tutorials/smooth-scroll/bin/smooth-scroll-02.vs
 Writing Symbol file: bin/smooth-scroll-02.sym
