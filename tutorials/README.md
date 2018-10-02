@@ -22,11 +22,9 @@
 ### Being Prepared
    	
 5. Raster Bars  
-6. Smooth Scroll
 7. Sprite Muliplexer
 8. Racing Sprites
 
-4. Petscii Scroll 
 5. Logo Swing (ACME)
 6. Music (ACME)
 7. Multicolor Bitmap (ACME)
