@@ -1,20 +1,17 @@
-# Beginner Routines
+# Tutorials
+*Simple C64 assembly references for beginners.*   
 
-Basic C64 assembly references for beginners.   
-
-1. [Colorwash](colorwash)   
-   Add a little color to your text
+1. [Custom Charset](custom-charset)   
+   How to replace standart character set with a custom one,
+2. [Colorwash](colorwash)  
+   Add a little color to your text,
+3. [Smooth Scroll](smooth-scroll)   
+   Smooth text scroll with 3 examples,
    
-2. [Smooth Scroll](smooth-scroll)   
-   Smooth text scroll 
-   
-2. [Custom Charset](custom-charset)   
- 	When you get tired of the Commodore font faces 
- 	 
-3. [Logo Swing](logo-swing)  
+4. [Logo Swing](logo-swing)  
 	How to put a big fat logo swinging on your screen
 
-4. [Multicolor Bitmap](multicolor-bitmap)  
+5. [Multicolor Bitmap](multicolor-bitmap)  
    How to show Multicolor Image
    
 ### Being Prepared
@@ -23,5 +20,12 @@ Basic C64 assembly references for beginners.
 6. Smooth Scroll
 7. Sprite Muliplexer
 8. Racing Sprites
+
+4. Petscii Scroll 
+5. Logo Swing (ACME)
+6. Music (ACME)
+7. Multicolor Bitmap (ACME)
+8. Raster bars (ACME)
+9. Sprite Multiplexing (ACME)
    
    
