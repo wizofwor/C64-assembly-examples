@@ -3,15 +3,20 @@
 
 1. [Custom Charset](custom-charset)   
    How to replace standart character set with a custom one,
+   
 2. [Colorwash](colorwash)  
    Add a little color to your text,
+   
 3. [Smooth Scroll](smooth-scroll)   
    Smooth text scroll with 3 examples,
    
-4. [Logo Swing](logo-swing)  
+4. [Petscii-scroll](petscii-scroll)   
+	Smooth scroll with petscii graphics
+   
+5. [Logo Swing](logo-swing)  
 	How to put a big fat logo swinging on your screen
 
-5. [Multicolor Bitmap](multicolor-bitmap)  
+6. [Multicolor Bitmap](multicolor-bitmap)  
    How to show Multicolor Image
    
 ### Being Prepared
