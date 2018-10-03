@@ -1,0 +1,35 @@
+parsing
+flex pass 1
+flex pass 2
+Output pass
+           *******        
+         ***********      
+        *************     
+       ******  *******    
+      ****** **  ******   
+      ****** **********   
+      ****** **  ******   
+       ******  *******    
+       ***************    
+        *************     
+        * ********* *     
+         * ******* *      
+         *  *****  *      
+          *  ***  *       
+          *  ***  *       
+           *  *  *        
+           *  *  *        
+            *****         
+            *****         
+            *****         
+             ***          
+
+Memory Map
+----------
+Default-segment:
+  $2140-$217e Sprite Data
+  $c000-$c02d Main
+
+Writing prg file: /Users/gokhan/Local-Repo/C64-assembly-examples/tutorials/sprites/bin/sprite-gfx_Compiled.prg
+Writing Vice symbol file: /Users/gokhan/Local-Repo/C64-assembly-examples/tutorials/sprites/bin/sprite-gfx.vs
+Writing Symbol file: bin/sprite-gfx.sym

@@ -19,6 +19,9 @@
 6. [Multicolor Bitmap](multicolor-bitmap)  
    How to show Multicolor Image
    
+7. [Sprite Graphics](sprite-graphics)   
+   Sprite Graphics with famous baloon sprite
+   
 ### Being Prepared
    	
 5. Raster Bars  
