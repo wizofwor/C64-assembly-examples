@@ -7,12 +7,12 @@ SPECIAL
 
 BASIC
 ==========================================
-hit
-back
-forward
-jump
-crouch
-stand
+hit  
+back  
+forward  
+jump  
+crouch  
+stand  
 
 
 Sorun: butonu bıraktıktan sonra kaydediyor.
