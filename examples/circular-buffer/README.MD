@@ -1,11 +1,11 @@
-SPECIAL
+SPECIAL  
 =========================================
-[FWD]+[DOWN]+[FWD]+[BUTTON] : dragon
-[DOWN]+[FWD]+[BUTTON]       : projectile
-[DOWN]+[BACK]+[BUTTON] 	    : roundhouse
-[BACK]+[FWD]+[BUTTON]       : sonic
+[FWD]+[DOWN]+[FWD]+[BUTTON] : dragon  
+[DOWN]+[FWD]+[BUTTON]       : projectile  
+[DOWN]+[BACK]+[BUTTON] 	    : roundhouse  
+[BACK]+[FWD]+[BUTTON]       : sonic  
 
-BASIC
+BASIC  
 ==========================================
 hit  
 back  
